@@ -7,9 +7,9 @@ import (
 
 // precodeIsValid checks if the given precode is valid.
 func precodeIsValid(precode string) bool {
-	return len(precode) == 4 && // the code must be 4 characters long
-		'A' <= precode[0] && precode[0] <= 'Z' && // the code must start with a letter
-		(precode[0] != 'A' || precode[1] != '0') && // the code must not start with A0
+	return len(precode) == 4 && // must be 4 characters long
+		'A' <= precode[0] && precode[0] <= 'Z' && // must start with a letter
+		(precode[0] != 'A' || precode[1] != '0') && // must not start with A0
 		precode[1] >= '0' && precode[1] <= '9' && // the second character must be a digit
 		precode[2] >= '0' && precode[2] <= '9' && // the third character must be a digit
 		precode[3] >= '0' && precode[3] <= '9' // the fourth character must be a digit
